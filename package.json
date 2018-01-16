@@ -1,9 +1,14 @@
 {
-    "name": "gitbook-plugin-mytest",
+    "name": "gitbook-plugin-test",
     "version": "0.0.1",
+    "main": "index.js",
     "description": "This is my first GitBook plugin",
     "engines": {
-        "gitbook": ">1.x.x"
+        "gitbook": "*"
     },
-    "gitbook": {}
+    "homepage": "https://github.com/WeMakecc/gitbook-plugin-test",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WeMakecc/gitbook-plugin-test.git"
+    }
 }
