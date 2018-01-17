@@ -16,7 +16,6 @@ module.exports = {
 
               return `<div style="display: flex;">${columns}</div>`;
             }
-          }
         }
     }
 };
