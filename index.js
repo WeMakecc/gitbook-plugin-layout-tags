@@ -6,15 +6,27 @@ module.exports = {
             }
         },
         double-column: {
-            blocks: ['col'],
-            process: function(parentBlock) {
-              var columns = '';
-              console.log(parentBlock.blocks);
-              parentBlock.blocks.forEach((block) => {
-                columns += `<div style="flex: ${block.args[0]};">${block.body}</div>`;
-              });
+            // blocks: ['col'],
+            // process: function(parentBlock) {
+            //   var columns = '';
+            //   console.log(parentBlock.blocks);
+            //   parentBlock.blocks.forEach((block) => {
+            //     columns += `<div style="flex: ${block.args[0]};">${block.body}</div>`;
+            //   });
 
-              return `<div style="display: flex;">${columns}</div>`;
+            //   return `<div style="display: flex;">${columns}</div>`;
+            // }
+            grid: {
+                blocks: ['col'],
+                process: function(parentBlock) {
+                    var columns = '';
+                    console.log(parentBlock.blocks);
+                    parentBlock.blocks.forEach((block) => {
+                      columns += `<div style="flex: ${block.args[0]};">${block.body}</div>`;
+                    });
+
+                    return `<div style="display: flex;">${columns}</div>`;
+                }
             }
         }
     }
