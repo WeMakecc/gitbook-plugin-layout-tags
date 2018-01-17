@@ -1,8 +1,8 @@
 module.exports = {
     blocks: {
-        tag1: {
+        image: {
             process: function(block) {
-                return "<p style='color:blue;'>"+block.body+"</p>";
+                return "<img src='"+block.body+"' alt='"+block.args[0]+"' width='"+block.args[1]+"' align='"+block.args[2]+"' style='"+block.args[2]+"'>";
             }
         }
     }
