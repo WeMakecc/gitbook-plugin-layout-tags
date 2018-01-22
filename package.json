@@ -1,6 +1,6 @@
 {
     "name": "gitbook-plugin-layout-tags",
-    "version": "0.0.31",
+    "version": "0.0.32",
     "main": "index.js",
     "description": "GitBook plugin that adds tags to customize the layout",
     "engines": {
