@@ -23,7 +23,7 @@ module.exports = {
         grid: {
             blocks: ['col1', 'col2'],
             process: function(parentBlock) {
-                return `<div style="float: left; width: 50%; margin-right: 5px;">`+parentBlock.blocks[0].body+`</div><div style="float: left; width: 50%; margin-left: 5px;">`+parentBlock.blocks[1].body+`</div>`;
+                return `<div style="float: left; width: 48%; margin-right: 2%;">`+parentBlock.blocks[0].body+`</div><div style="float: left; width: 48%; margin-left: 2%;">`+parentBlock.blocks[1].body+`</div>`;
             }
         }
     }
