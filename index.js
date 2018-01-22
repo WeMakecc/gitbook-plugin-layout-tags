@@ -5,7 +5,16 @@ module.exports = {
             process: function(parentBlock) {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
               var text_tag = parentBlock.blocks[1].body;
-              return "<p style='overflow:hidden'>"+img_tag+""+text_tag+"</p>";
+              var text_tag_processed = {
+                function(){
+                  if (text_tag==undefined) {
+                    return "text";
+                  } else {
+                    return text_tag;
+                  }
+                }
+              };
+              return "<p style='overflow:hidden'>"+img_tag+""+text_tag_processed+"</p>";
             }
         },
         // grid: {
