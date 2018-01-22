@@ -1,11 +1,6 @@
 module.exports = {
     blocks: {
-        // image: {
-        //     process: function(block) {
-        //         return "<p style='overflow:hidden'><img src='"+block.body+"' alt='"+block.args[0]+"' width='"+block.args[1]+"' align='"+block.args[2]+"' style='"+block.args[3]+"'></p>";
-        //     }
-        // },
-        test: {
+        image: {
             blocks: ['image_url', 'image_text'],
             process: function(parentBlock) {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
