@@ -4,7 +4,7 @@ module.exports = {
             blocks: ['image_url', 'image_text'],
             process: function(parentBlock) {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
-              var text_tag = parentBlock.blocks[1].body;
+              var text_tag = if(parentBlock.blocks[1]!=undefined){parentBlock.blocks[1].body}else{""};
               return "<p style='overflow:hidden'>"+img_tag+""+text_tag+"</p>";
             }
         },
