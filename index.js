@@ -6,10 +6,10 @@ module.exports = {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
               var text_tag = {
                 function() {
-                  if(parentBlock.blocks[1]!=undefined) {
+                  if(parentBlock.blocks[1]=='image_text') {
                     return parentBlock.blocks[1].body;
-                  } else {
-                    return "";
+                  } else if(parentBlock.blocks[1]==undefined) {
+                    return "text";
                   }
                 }
               }
