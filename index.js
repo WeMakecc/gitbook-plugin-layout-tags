@@ -1,8 +1,13 @@
 module.exports = {
     blocks: {
+        // image: {
+        //     process: function(block) {
+        //         return "<p style='overflow:hidden'><img src='"+block.body+"' alt='"+block.args[0]+"' width='"+block.args[1]+"' align='"+block.args[2]+"' style='"+block.args[3]+"'></p>";
+        //     }
+        // },
         image: {
-            process: function(block) {
-                return "<p style='overflow:hidden'><img src='"+block.body+"' alt='"+block.args[0]+"' width='"+block.args[1]+"' align='"+block.args[2]+"' style='"+block.args[3]+"'></p>";
+            process: function(parentBlock) {
+                return "<p style='overflow:hidden'><img src='"+block[0].body+"' alt='"+block.args[0]+"' width='"+block.args[1]+"' align='"+block.args[2]+"' style='"+block.args[3]+"'>"+block[1].body+"</p>";
             }
         },
         grid: {
