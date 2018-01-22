@@ -21,7 +21,7 @@ module.exports = {
         //     }
         // }
         grid: {
-            blocks: ['col 1', 'col 2'],
+            blocks: ['col1', 'col2'],
             process: function(parentBlock) {
                 return `<div style="align: left; width: 50%;">`+parentBlock.blocks[0].body+`</div><div style="align: left; width: 50%;">`+parentBlock.blocks[1].body+`</div>`;
             }
