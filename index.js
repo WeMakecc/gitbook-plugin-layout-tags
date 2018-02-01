@@ -25,6 +25,15 @@ module.exports = {
             process: function(parentBlock) {
                 return `<div style="float: left; width: 48%; margin-right: 2%;">`+parentBlock.blocks[0].body+`</div><div style="float: left; width: 48%; margin-left: 2%;">`+parentBlock.blocks[1].body+`</div><div style="clear: both"></div>`;
             }
-        }
+        },
+        bom: {
+            blocks: ['bom_image', 'bom_description', 'bom_quantity'],
+            process: function(parentBlock) {
+              var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
+              var description_tag = parentBlock.blocks[1].body;
+              var quantity_tag = parentBlock.blocks[2].body;
+              return "<p style='overflow:hidden'>"+img_tag+""+description_tag+""+quantity_tag+"</p>";
+            }
+        },
     }
 };
