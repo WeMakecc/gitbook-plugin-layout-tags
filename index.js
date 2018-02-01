@@ -32,7 +32,7 @@ module.exports = {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
               var description_tag = "<p style='float: left'>"+parentBlock.blocks[1].body+"</p>";
               var quantity_tag =  "<p style='float: right'>"+parentBlock.blocks[2].body+"</p>";
-              return "<p style='overflow:hidden'>"+img_tag+""+description_tag+""+quantity_tag+"</p>";
+              return "<div style='overflow:hidden'>"+img_tag+""+description_tag+""+quantity_tag+"</div>";
             }
         },
     }
