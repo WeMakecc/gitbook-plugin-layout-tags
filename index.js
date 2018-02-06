@@ -30,8 +30,8 @@ module.exports = {
             blocks: ['bom_image', 'bom_description', 'bom_quantity'],
             process: function(parentBlock) {
               var img_tag = "<img src='"+parentBlock.blocks[0].body+"' alt='"+parentBlock.blocks[0].args[0]+"' width='"+parentBlock.blocks[0].args[1]+"' align='"+parentBlock.blocks[0].args[2]+"' style='"+parentBlock.blocks[0].args[3]+"'>";
-              var description_tag = "<p style='float: left'>"+parentBlock.blocks[1].body+"</p>";
-              var quantity_tag =  "<p style='float: right'>"+parentBlock.blocks[2].body+"</p>";
+              var description_tag = "<p style='float: left; margin-left: 10px;'>"+parentBlock.blocks[1].body+"</p>";
+              var quantity_tag =  "<p style='float: right; margin-left: 10px; font-weight: 800;'>"+parentBlock.blocks[2].body+"</p>";
               return "<div style='overflow:hidden'>"+img_tag+""+description_tag+""+quantity_tag+"</div>";
             }
         },
